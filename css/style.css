@@ -1,14 +1,22 @@
+/* Import */
+@import url('https://fonts.cdnfonts.com/css/youtube-sans');
+@import url('https://googleapis.com');
 
 /* Color Variables */
 :root {
-    --primary: white;
+  --primary: white;
+  --font-color1: #0F0F0F; /*Light theme*/
+  --font-placeholder: #757575;
+  --border-light: #C6C6C6;
+  --border-light1: #D3D3D3;
+  --border-light-active: #2E6EBE;
 }
 
 /* Reset */
 *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -19,4 +27,146 @@ input, button, textarea, select {
   font: inherit;
 }
 
+/* Inputs */
+
+input[type="text"]:focus {
+  border-color: #0057ff;
+  background-color: #f0f5ff;
+  outline: none;                                /* Removes the default browser ring */
+  box-shadow: 0 0 5px rgba(0, 87, 255, 0.5);  /* glowing effect */
+}
+
+input::placeholder {
+  color: var(--font-placeholder);
+}
+
 /*  */
+
+body {
+  font-family: 'YouTube Sans', sans-serif;
+}
+
+/* Semantic tags */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+main {
+
+}
+
+footer {
+
+}
+
+/* Navbar: left-nav */
+.left-nav {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.hamburger-menu i {
+  color: var(--font-color1);
+  font-size: 1.3rem;
+  padding: 0 0.5rem 0 0.5rem;;
+}
+
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  height: 2.1rem;
+  padding: 0.4rem 0 0.4rem 0;
+  border-radius: 50px;
+  transition: background-color 0.8s ease-out;
+}
+
+.hamburger-menu:active {
+  background-color: var(--border-light);
+  transition: background-color 0.05s ease-out; 
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.brand-logo img {
+  width: 45px;
+}
+
+.brand-logo p {
+  padding-top: 0;
+  font-size: 1.5rem;
+}
+
+/* Navbar: search-controls */
+.search-controls {
+  display: flex;
+  align-items: center;
+}
+
+.search-field {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding: 0.6rem 0.5rem 0.6rem 0.8rem;
+  border-radius: 20px 0 0 20px;
+  width: 28rem;
+  border: 1px solid var(--border-light);
+}
+
+.search-controls button {
+  background-color: #F8F8F8;
+  font-size: 1.4rem;
+  border-radius: 0 20px 20px 0;
+  padding: 0.22rem;
+  width: 4rem;
+  border: 1px solid var(--border-light1);
+  user-select: none;
+}
+
+/* Navbar: account-controls */
+.account-controls {
+  display: flex;
+  align-items: center;
+}
+
+.kebab-settings i {
+  font-size: 1.3rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.kebab-settings {
+  padding: 0.4rem;
+  border-radius: 50px;
+  transition: background-color 0.8s ease-out;
+}
+
+.kebab-settings:active {
+  background-color: var(--border-light);
+  transition: background-color 0.05s ease-out; 
+}
+
+.signup-button {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  margin-left: 1rem;
+  user-select: none;
+  color: var(--border-light-active);
+}
+
+.signup-button:hover {
+  background-color: #DEF1FF;
+}
+
+.signup-button i {
+  padding: 0 0.5rem 0 0;
+  font-size: 1.5rem;
+}
