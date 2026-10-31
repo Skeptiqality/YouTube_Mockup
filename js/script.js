@@ -17,3 +17,5 @@ navItems.forEach((navItem) => {
         navItem.querySelector("i").classList.add("active");
     });
 });
+
+// JavaScript for hamburger menu functionality.
