@@ -279,6 +279,7 @@ main.sidebar-expanded {
   margin-right: 0.8rem;
   flex: 0 0 auto;
   white-space: nowrap;
+  user-select: none;
 }
 
 /* Main: hero-section */
@@ -294,6 +295,7 @@ main.sidebar-expanded {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  user-select: none;
 }
 
 .text h1 {
@@ -319,6 +321,7 @@ main.sidebar-expanded {
   border-radius: 6px;
   padding: 0.6rem;
   background-color: var(--container-bg);
+  user-select: none;
 }
 
 .video-container video {
