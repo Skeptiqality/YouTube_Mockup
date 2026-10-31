@@ -58,7 +58,7 @@ header {
 
 main {
   display: grid;
-  grid-template-columns: 16rem minmax(0, 1fr);
+  grid-template-columns: 14rem minmax(0, 1fr);
   align-items: start;
 }
 
@@ -189,7 +189,7 @@ footer {
   display: flex;
   flex-direction: column;
   height: calc(100dvh - var(--topnav-height));
-  width: 16rem;
+  width: 14rem;
   position: sticky;
   top: var(--topnav-height);
   align-self: start;
@@ -199,8 +199,30 @@ footer {
 
 .left-sidebar nav {
   overflow-y: auto;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+.left-sidebar nav::-webkit-scrollbar {
+  width: 0;
+}
+
+.left-sidebar nav::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.left-sidebar nav:hover {
   scrollbar-width: thin;
-  height: 100%;
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
+}
+
+.left-sidebar nav:hover::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left-sidebar nav:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-section,
