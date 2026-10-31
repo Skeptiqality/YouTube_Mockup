@@ -1,3 +1,3 @@
 In compliance for COMP 001
 
-An attempt to immitate YouTube's home page.
+First Website about displaying videos, images, and using tags like h1, and div.
