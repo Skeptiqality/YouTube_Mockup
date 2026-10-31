@@ -10,6 +10,7 @@
   --border-light: #C6C6C6;
   --border-light1: #D3D3D3;
   --border-light-active: #2E6EBE;
+  --topnav-height: 4rem;
 }
 
 /* Reset */
@@ -48,18 +49,29 @@ body {
 
 /* Semantic tags */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem 0 1rem;
+  height: var(--topnav-height);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--primary);
 }
 
 main {
-
+  display: grid;
+  grid-template-columns: 16rem minmax(0, 1fr);
+  align-items: start;
 }
 
 footer {
 
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem 0 1rem;
 }
 
 /* Navbar: left-nav */
@@ -169,4 +181,29 @@ footer {
 .signup-button i {
   padding: 0 0.5rem 0 0;
   font-size: 1.5rem;
+}
+
+/* Navbar: left-sidebar */
+.left-sidebar {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - var(--topnav-height));
+  width: 16rem;
+  position: sticky;
+  top: var(--topnav-height);
+  align-self: start;
+  grid-row: 1 / span 2;
+  z-index: 999;
+}
+
+.left-sidebar nav {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  height: 100%;
+}
+
+.hero-section,
+.video-display {
+  grid-column: 2;
 }
