@@ -1,6 +1,7 @@
 function toggle_menu() {
     const leftSidebar = document.getElementById("left-sidebar");
     leftSidebar.classList.toggle("active");
+    leftSidebar.closest("main").classList.toggle("sidebar-expanded");
 }
 
 document.getElementById("hamburger-menu").addEventListener("click", toggle_menu);

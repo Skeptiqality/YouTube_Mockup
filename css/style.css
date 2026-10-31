@@ -59,8 +59,13 @@ header {
 
 main {
   display: grid;
-  grid-template-columns: 14rem minmax(0, 1fr);
+  grid-template-columns: 5rem minmax(0, 1fr);
   align-items: start;
+  /* transition: grid-template-columns 0.2s ease; */
+}
+
+main.sidebar-expanded {
+  grid-template-columns: 14rem minmax(0, 1fr);
 }
 
 .topnav {
@@ -184,16 +189,14 @@ main {
 .left-sidebar {
   height: calc(100dvh - var(--topnav-height));
   width: 5rem;
-  position: sticky;
+  position: fixed;
   top: var(--topnav-height);
-  align-self: start;
-  grid-row: 1 / span 2;
+  left: 0;
   z-index: 999;
 }
 
 .left-sidebar.active {
   width: 14rem;
-  font-size: 3rem;
 }
 
 .left-sidebar nav {
@@ -253,6 +256,36 @@ main {
 }
 
 .hero-section,
-.video-display {
+.video-display,
+.tags-selection {
   grid-column: 2;
+}
+
+/* Main: tags-selection */
+.tags-selection {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.tags-container {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 3px 10px;
+  margin-right: 0.8rem;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* Main: hero-section */
+.hero-section {
+  padding: 0.3rem 0 0 0.5rem; 
+}
+
+.hero {
+  background-color: #2E6EBE;
+  height: 15rem;
+  border-radius: 6px;
 }
