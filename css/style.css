@@ -6,11 +6,12 @@
 :root {
   --primary: white;
   --font-color1: #0F0F0F; /*Light theme*/
-  --font-placeholder: #757575;
+  --font-placeholder: rgb(117, 117, 117);
   --border-light: #C6C6C6;
   --border-light1: #D3D3D3;
   --border-light-active: #2E6EBE;
   --topnav-height: 4rem;
+  --caption-p: #6d6d6d;
 }
 
 /* Reset */
@@ -281,11 +282,43 @@ main.sidebar-expanded {
 
 /* Main: hero-section */
 .hero-section {
-  padding: 0.3rem 0 0 0.5rem; 
+  padding: 0.3rem 0.5rem 0 0.5rem; 
 }
 
 .hero {
   background-color: #2E6EBE;
   height: 15rem;
   border-radius: 6px;
+}
+
+/* Main: video-display */
+.video-display {
+  padding: 0.3rem 0.5rem 0 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
+  gap: 1rem;
+}
+
+.video-container {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 0.6rem;
+}
+
+.video-container video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.captions h4 {
+  font-size: 1.3rem; 
+}
+
+.captions p {
+  color: var(--caption-p);
 }
